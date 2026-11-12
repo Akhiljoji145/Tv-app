@@ -11,7 +11,7 @@ android {
     defaultConfig {
         applicationId = "com.akhil.tvdocumentviewer"
         minSdk = 21
-        targetSdk = 28
+        targetSdk = 31
         versionCode = 1
         versionName = "1.0"
     }
@@ -24,4 +24,9 @@ android {
     kotlinOptions {
         jvmTarget = "17"
     }
+}
+
+tasks.withType<JavaCompile>().configureEach {
+    sourceCompatibility = "17"
+    targetCompatibility = "17"
 }
